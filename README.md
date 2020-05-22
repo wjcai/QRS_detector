@@ -4,7 +4,7 @@ CPSC2019 winner's algorithm
 ## DATA
 All 12 records of NSTDB are included in ./data/nstdb.  
 10 records of CPSC2019, 1 record of MITDB and 1 record of QTDB are included.  
-1 record in txt file is in mydb.  
+1 record in txt file is in ./data/mydb.  
 
 ## Models
 The details of the CNN and CRNN models are described in the paper listed below.  
