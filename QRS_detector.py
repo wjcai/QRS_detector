@@ -29,11 +29,9 @@ def pp(data):   #preprocessing
 def load_data(data_path):
     db = []
     filenames = []
-    def is_mat(l):
-        return l.endswith('.mat')
-    ecg_files = list(filter(is_mat, os.listdir(data_path)))
+    ecg_files = os.listdir(data_path)
     for file in ecg_files:
-        ecg_data = io.loadmat(data_path+file)['ecg'].squeeze()
+        ecg_data = np.loadtxt(data_path+file)
         db.append(pp(ecg_data))
         filenames.append(file)
     print('%d records are found.'%len(db))
@@ -43,12 +41,12 @@ def resamp(db,fs):
     data = []
     for i in range(len(db)):
         if fs!=500:
-            samp = db[0][0][:,0]
+            samp = db[0]
             ln = len(samp)//fs
             remain = len(samp)%fs
-            new = resample(db[i][0][:ln*fs,0],ln*500)
+            new = resample(db[i][:ln*fs],ln*500)
             if remain>1:
-                rem = resample(db[i][0][ln*fs:,0],int(remain/fs*500))
+                rem = resample(db[i][ln*fs:],int(remain/fs*500))
                 new = np.concatenate((new,rem))
         else:
             new = db[i]
