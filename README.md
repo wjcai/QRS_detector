@@ -22,4 +22,4 @@ The details of the CNN and CRNN models are described in the paper listed below.
 		`python QRS_detector.py cnn mydb 250`
 		
 If you think this algorithm is helpful, please cite this paper as a reference:  
-            _W Cai,H Qin. QRS complex detection using novel deep learning neural networks. IEEE Access,2020._
+            _W Cai,H Qin. QRS complex detection using novel deep learning neural networks. IEEE Access,10.1109/ACCESS.2020.2997473._
