@@ -2,10 +2,10 @@
 CPSC2019 winner's algorithm  
 
 ## Requirements
-numpy
-wfdb
-scipy
-tensorflow 2.X or tensorflow 1.X + keras
+numpy  
+wfdb  
+scipy  
+tensorflow 2.X or tensorflow 1.X + keras  
 
 ## DATA
 All 12 records of NSTDB are included in ./data/nstdb.  
