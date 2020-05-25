@@ -1,6 +1,12 @@
 # QRS_detector
 CPSC2019 winner's algorithm  
 
+## Requirements
+numpy
+wfdb
+scipy
+tensorflow 2.X or tensorflow 1.X + keras
+
 ## DATA
 All 12 records of NSTDB are included in ./data/nstdb.  
 10 records of CPSC2019, 1 record of MITDB and 1 record of QTDB are included.  
@@ -21,5 +27,5 @@ The details of the CNN and CRNN models are described in the paper listed below.
 		python QRS_detector.py model[cnn,crnn] database[mydb(txt only)] sampling_frequency[100-10000]  
 		`python QRS_detector.py cnn mydb 250`
 		
-If you think this algorithm is helpful, please cite this paper as a reference:  
-            _W Cai, H Qin. QRS complex detection using novel deep learning neural networks. IEEE Access,10.1109/ACCESS.2020.2997473._
+_If you think this algorithm is helpful, please cite this paper as a reference:_  
+W Cai, H Qin. QRS complex detection using novel deep learning neural networks. IEEE Access,10.1109/ACCESS.2020.2997473.
