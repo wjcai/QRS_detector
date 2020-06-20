@@ -41,7 +41,7 @@ def resamp(db,fs):
     data = []
     for i in range(len(db)):
         if fs!=500:
-            samp = db[0]
+            samp = db[i]
             ln = len(samp)//fs
             remain = len(samp)%fs
             new = resample(db[i][:ln*fs],ln*500)
